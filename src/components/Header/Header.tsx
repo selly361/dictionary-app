@@ -1,6 +1,6 @@
 import { Container, Divider, StyledHeader } from "./styles";
 
-import { FontSelector } from "components";
+import { FontSelector, ThemeChanger } from "components";
 import { ICommonProps } from "types";
 import { LogoIcon } from "assets";
 import React from "react";
@@ -15,6 +15,7 @@ function Header(props: ICommonProps) {
       <Container>
         <FontSelector {...props} />
         <Divider />
+      <ThemeChanger {...props} />
       </Container>
     </StyledHeader>
   );

@@ -12,6 +12,7 @@ declare module 'styled-components' {
         font: EFonts;
         dropDownShadow: string;
         dropDownBg: string;
+        themeButtonBg: string;
   }
 }
 

@@ -48,7 +48,7 @@ function FontSelector({ themeStyles, setThemeStyles }: ICommonProps) {
 
   return (
     <Container ref={modalRef}>
-      <StyledButton onClick={() => setOpen((e) => !e)}>
+      <StyledButton className={open ? "open" : ''} onClick={() => setOpen((e) => !e)}>
         {currentFont}
 
         <ArrowIcon />

@@ -10,6 +10,14 @@ export const StyledButton = styled.button`
   ${Paragraph}
   background-color: transparent;
   font-weight: 700;
+
+  svg {
+    transition: transform 1s ease;
+  }
+
+  &.open svg {
+    transform: rotate(180deg);
+  }
 `;
 
 export const Container = styled.div`

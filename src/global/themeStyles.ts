@@ -24,7 +24,10 @@ const themeStyles = {
     /* Font Selector DropDown */
 
     dropDownShadow: "0px 5px 30px rgba(0, 0, 0, 0.1);",
-    dropDownBg: "#FFFFFF"
+    dropDownBg: "#FFFFFF",
+
+    /* Theme Button */
+    themeButtonBg: "#757575"
   },
 
   dark: {
@@ -50,7 +53,10 @@ const themeStyles = {
     /* Font Selector DropDown */
 
     dropDownShadow: "0px 5px 30px #A445ED;",
-    dropDownBg: "#1F1F1F"
+    dropDownBg: "#1F1F1F",
+
+    /* Theme Button */
+    themeButtonBg: "#A445ED"
   },
 };
 
