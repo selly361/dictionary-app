@@ -1,6 +1,6 @@
 import { Paragraph } from "global/defaultStyles";
+import { motion } from "framer-motion";
 import styled from "styled-components";
-
 export const StyledButton = styled.button`
   width: 120px;
   height: 24px;
@@ -16,7 +16,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const DropDown = styled.div`
+export const DropDown = styled(motion.div)`
   width: 188px;
   height: 152px;
   background-color: ${(props) => props.theme.dropDownBg};
