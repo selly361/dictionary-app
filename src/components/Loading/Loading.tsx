@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import { StyledLoading } from "./styles";
 
 function Loading() {
-  return (
-    <div>Loading</div>
-  )
+  return <StyledLoading />;
 }
 
-export default Loading
+export default Loading;

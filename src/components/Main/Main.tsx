@@ -1,14 +1,18 @@
+import { Header, Loading, SearchField } from "components";
 import { ICommonProps, TFont } from "types";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import { GlobalStyles } from "global/styles";
-import { Header, SearchField } from "components";
 import { StyledMain } from "./styles";
 
 function Main(props: ICommonProps) {
 
   const [input, setInput] = useState("keyboard")
 
+
+  useEffect(() => {
+    
+  }, [])
 
 
   return (

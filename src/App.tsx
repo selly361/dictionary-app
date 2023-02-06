@@ -1,10 +1,10 @@
-import { Main, Wrapper } from 'components';
+import { Main, Wrapper } from "components";
 
-import React from 'react';
+import React from "react";
 
 function App() {
   return (
-    <Wrapper />
+      <Wrapper />
   );
 }
 
