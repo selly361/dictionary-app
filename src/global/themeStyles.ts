@@ -27,7 +27,11 @@ const themeStyles = {
     dropDownBg: "#FFFFFF",
 
     /* Theme Button */
-    themeButtonBg: "#757575"
+    themeButtonBg: "#757575",
+
+    /* SearchField Background */
+
+    inputBg: "#F4F4F4"
   },
 
   dark: {
@@ -56,7 +60,11 @@ const themeStyles = {
     dropDownBg: "#1F1F1F",
 
     /* Theme Button */
-    themeButtonBg: "#A445ED"
+    themeButtonBg: "#A445ED",
+
+    /* SearchField Background */
+
+    inputBg: "#1F1F1F"
   },
 };
 

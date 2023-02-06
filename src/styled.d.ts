@@ -6,13 +6,14 @@ import 'styled-components';
 // and extend them!
 declare module 'styled-components' {
   export interface DefaultTheme {
-        body: string;
-        text: IText;
-        purple: string;
-        font: EFonts;
-        dropDownShadow: string;
-        dropDownBg: string;
-        themeButtonBg: string;
+    body: string;
+    text: IText;
+    purple: string;
+    font: EFonts;
+    dropDownShadow: string;
+    dropDownBg: string;
+    themeButtonBg: string;
+    inputBg: string;
   }
 }
 

@@ -19,19 +19,20 @@ function FontSelector({ themeStyles, setThemeStyles }: ICommonProps) {
   const [open, setOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  function changeFont(font: TFont) {
+
+  useEffect(() => {
+
     const newThemeStyles = themeStyles;
 
-    newThemeStyles.dark.font = EFonts[font];
-    newThemeStyles.light.font = EFonts[font];
+    newThemeStyles.dark.font = EFonts[currentFont];
+    newThemeStyles.light.font = EFonts[currentFont];
+
 
     setThemeStyles(newThemeStyles);
     setOpen(false);
-  }
 
-  useEffect(() => {
-    changeFont(currentFont);
   }, [currentFont]);
+
 
   function handleClickOutside(event: any) {
     if (modalRef.current && !modalRef.current.contains(event.target)) {

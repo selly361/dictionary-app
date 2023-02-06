@@ -56,6 +56,8 @@ const SearchFieldContainer = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  Background: ${props => props.theme.inputBg};
+  margin: auto;
 
   &:focus {
     border: 1px solid #a445ed;
@@ -73,6 +75,8 @@ const SearchField = css`
   font-size: 20px;
   line-height: 24px;
   transition: 1s ease border;
+  background: transparent;
+  width: 90%;
 `;
 
 const PlayButon = css`

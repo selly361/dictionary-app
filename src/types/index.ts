@@ -29,5 +29,11 @@ interface ICommonProps {
   };
 }
 
-export type { TFont, IText, ICommonProps };
+interface ISearchFieldProps {
+  input: string;
+  setInput: React.Dispatch<React.SetStateAction<string>>
+}
+
+
+export type { TFont, IText, ICommonProps, ISearchFieldProps };
 export { EFonts };
