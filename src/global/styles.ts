@@ -22,6 +22,10 @@ export const GlobalStyles = createGlobalStyle`
 
   }
 
+  h1 {
+    color: white;
+  }
+
   body {
     font-style: normal;
     width: 100vw;

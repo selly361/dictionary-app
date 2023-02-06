@@ -4,23 +4,21 @@ import React, { Fragment, useEffect, useState } from "react";
 
 import { GlobalStyles } from "global/styles";
 import { StyledMain } from "./styles";
+import { useFetchData } from "hooks/useFetchData";
 
 function Main(props: ICommonProps) {
+  const [input, setInput] = useState("keyboard");
 
-  const [input, setInput] = useState("keyboard")
+  const { data, loading, error, fetchData } = useFetchData(input);
 
-
-  useEffect(() => {
-    
-  }, [])
-
+  
 
   return (
     <Fragment>
       <GlobalStyles />
       <StyledMain>
-      <Header {...props} />
-      <SearchField input={input} setInput={setInput} />
+        <Header {...props} />
+        <SearchField input={input} setInput={setInput} />
       </StyledMain>
     </Fragment>
   );
