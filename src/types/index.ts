@@ -14,6 +14,7 @@ enum EFonts {
 }
 
 
+
 interface ICommonProps {
   theme: string;
   setTheme: React.Dispatch<React.SetStateAction<string>>;
@@ -34,6 +35,46 @@ interface ISearchFieldProps {
   setInput: React.Dispatch<React.SetStateAction<string>>
 }
 
+/* Type for the data returned from the api */
 
-export type { TFont, IText, ICommonProps, ISearchFieldProps };
+interface ILicense {
+  name: string;
+  url: string;
+}
+
+interface IPhonetic {
+  text: string;
+  audio: string;
+  sourceUrl?: string;
+  license?: ILicense;
+}
+
+interface IDefinition {
+  definition: string;
+  synonyms: string[];
+  antonyms: string[];
+  example?: string;
+}
+
+interface IPartOfSpeech {
+  partOfSpeech: string;
+  definitions: IDefinition[];
+  synonyms: string[];
+  antonyms: string[];
+}
+
+interface IWord {
+  word: string;
+  phonetic: string;
+  phonetics: IPhonetic[];
+  meanings: IPartOfSpeech[];
+  license: ILicense;
+  sourceUrls: string[];
+}
+
+
+
+
+
+export type { TFont, IText, ICommonProps, ISearchFieldProps, IWord };
 export { EFonts };
