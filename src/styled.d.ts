@@ -14,6 +14,7 @@ declare module 'styled-components' {
     dropDownBg: string;
     themeButtonBg: string;
     inputBg: string;
+    articleDivider: string;
   }
 }
 

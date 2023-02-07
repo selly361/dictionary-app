@@ -1,15 +1,19 @@
-import { Header, Loading, SearchField } from "components";
+import { Article, ErrorMessage, Header, Loading, SearchField } from "components";
 import { ICommonProps, TFont } from "types";
 import React, { Fragment, useEffect, useState } from "react";
 
 import { GlobalStyles } from "global/styles";
 import { StyledMain } from "./styles";
+import { useDebounce } from "hooks/useDebounce";
 import { useFetchData } from "hooks/useFetchData";
 
 function Main(props: ICommonProps) {
   const [input, setInput] = useState("keyboard");
 
   const { data, loading, error, fetchData } = useFetchData(input);
+
+
+
 
   
 
@@ -18,7 +22,8 @@ function Main(props: ICommonProps) {
       <GlobalStyles />
       <StyledMain>
         <Header {...props} />
-        <SearchField input={input} setInput={setInput} />
+        <SearchField fetchData={fetchData} input={input} setInput={setInput} />
+        {loading ? <Loading /> : !loading && !error ? <Article data={data} /> : <ErrorMessage />}
       </StyledMain>
     </Fragment>
   );

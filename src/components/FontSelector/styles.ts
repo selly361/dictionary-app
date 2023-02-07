@@ -1,6 +1,7 @@
 import { Paragraph } from "global/defaultStyles";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+
 export const StyledButton = styled.button`
   width: 120px;
   height: 24px;
@@ -15,7 +16,7 @@ export const StyledButton = styled.button`
     transition: transform 1s ease;
   }
 
-  &.open svg {
+  &.active svg {
     transform: rotate(180deg);
   }
 `;

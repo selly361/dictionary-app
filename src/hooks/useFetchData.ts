@@ -8,9 +8,16 @@ export const useFetchData = (word: string) => {
   const [data, setData] = useState<IWord | null>(null);
   const [error, setError] = useState<null | true>(null);
 
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+
   const fetchData = async () => {
     setLoading(true);
     setError(null);
+    
     try {
       const { data } = await axios(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`

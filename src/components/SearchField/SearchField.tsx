@@ -1,15 +1,28 @@
-import { StyledFieldSet, StyledInput } from './styles'
-import React from 'react'
-import { ISearchFieldProps } from 'types'
-import { SearchIcon } from 'assets'
+import { StyledFieldSet, StyledInput } from "./styles";
 
-function SearchField({ input, setInput }: ISearchFieldProps) {
+import { ISearchFieldProps } from "types";
+import React from "react";
+import { SearchIcon } from "assets";
+import { useDebounce } from "hooks/useDebounce";
+
+function SearchField({ input, setInput, fetchData }: ISearchFieldProps) {
+
+
+  const debouncedFetcData = useDebounce(fetchData, 1000)
+
+
   return (
     <StyledFieldSet>
-      <StyledInput value={input} onChange={(e) => setInput(e.target.value)} />
-      <SearchIcon />
+      <StyledInput
+        value={input}
+        onKeyDown={(e) => {
+          if (e.key == "Enter") debouncedFetcData();
+        }}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <SearchIcon onClick={debouncedFetcData} />
     </StyledFieldSet>
-  )
+  );
 }
 
-export default SearchField
+export default SearchField;

@@ -15,6 +15,7 @@ export const StyledLoading = styled.div`
   width: 200px;
   border-radius: 50%;
   animation: 1s infinite ${spin} linear;
-  border: 14px solid #333;
+  border: 20px solid ${props => props.theme.inputBg};
   border-top-color: ${(props) => props.theme.purple};
+  margin: auto;
 `;

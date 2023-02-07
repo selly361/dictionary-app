@@ -79,15 +79,6 @@ const SearchField = css`
   width: 90%;
 `;
 
-const PlayButon = css`
-  path {
-    transition: 1s ease fill;
-  }
-  &:hover path {
-    fill: #a445ed;
-  }
-`;
-
 export {
   HeadingL,
   HeadingM,
@@ -96,5 +87,4 @@ export {
   SearchFieldContainer,
   Paragraph,
   ParagraphS,
-  PlayButon,
 };

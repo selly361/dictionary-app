@@ -33,6 +33,7 @@ interface ICommonProps {
 interface ISearchFieldProps {
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>
+  fetchData: () => Promise<void>
 }
 
 /* Type for the data returned from the api */

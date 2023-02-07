@@ -31,7 +31,11 @@ const themeStyles = {
 
     /* SearchField Background */
 
-    inputBg: "#F4F4F4"
+    inputBg: "#F4F4F4",
+
+    /* Article Divider */
+
+    articleDivider: "#E9E9E9",
   },
 
   dark: {
@@ -64,7 +68,11 @@ const themeStyles = {
 
     /* SearchField Background */
 
-    inputBg: "#1F1F1F"
+    inputBg: "#1F1F1F",
+
+    /* Article Divider */
+
+    articleDivider: "#3A3A3A",
   },
 };
 
