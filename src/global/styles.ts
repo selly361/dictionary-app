@@ -29,10 +29,12 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-style: normal;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 700;
     background-color: ${(props) => props.theme.body};
     padding-top: 58px;
+    overflow-x: hidden;
+    padding-bottom: 10px;
   }
 
   

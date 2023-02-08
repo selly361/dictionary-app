@@ -10,17 +10,17 @@ export const useFetchData = (word: string) => {
 
 
   useEffect(() => {
-    fetchData()
+    fetchData(word)
   }, [])
 
 
-  const fetchData = async () => {
+  const fetchData = async (text: string) => {
     setLoading(true);
     setError(null);
     
     try {
       const { data } = await axios(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${text}`
       );
 
       if (data.title == "No Definitions Found")

@@ -13,8 +13,6 @@ enum EFonts {
   "Mono" = "Inconsolata",
 }
 
-
-
 interface ICommonProps {
   theme: string;
   setTheme: React.Dispatch<React.SetStateAction<string>>;
@@ -32,8 +30,8 @@ interface ICommonProps {
 
 interface ISearchFieldProps {
   input: string;
-  setInput: React.Dispatch<React.SetStateAction<string>>
-  fetchData: () => Promise<void>
+  setInput: React.Dispatch<React.SetStateAction<string>>;
+  fetchData: (word: string) => Promise<void>;
 }
 
 /* Type for the data returned from the api */
@@ -73,9 +71,10 @@ interface IWord {
   sourceUrls: string[];
 }
 
+interface IArticleProps {
+  data: IWord | null;
+  handleClick: (word: string) => void;
+}
 
-
-
-
-export type { TFont, IText, ICommonProps, ISearchFieldProps, IWord };
+export type { TFont, IText, ICommonProps, ISearchFieldProps, IWord, IArticleProps };
 export { EFonts };
