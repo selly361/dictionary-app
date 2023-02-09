@@ -28,7 +28,6 @@ export const useFetchData = (word: string) => {
 
       setData(data[0]);
 
-      console.log(typeof data);
     } catch (err) {
       setError(true);
       setData(null);
