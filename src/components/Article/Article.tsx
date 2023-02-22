@@ -37,10 +37,6 @@ function Article({ data, handleClick }: IArticleProps) {
           <Heading>{data?.word}</Heading>
           <StyledPhonetic>{data?.phonetic}</StyledPhonetic>
         </TitleContainer>
-
-        <StyledPlayButton>
-          <PlayIcon />
-        </StyledPlayButton>
       </TopSection>
       {data &&
         data.meanings.map((meaning) => (
