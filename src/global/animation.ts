@@ -1,7 +1,3 @@
-export const page_animation = {
-    
-}
-
 
 export const fade_in_out = {
     hidden: {
