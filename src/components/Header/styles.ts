@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  width: 736.99px;
+  width: 100%;
   height: 36.5px;
   display: flex;
   justify-content: space-between;
   margin: auto;
   background-color: transparent;
   align-items: center;
+
+  @media (max-width: 813px){
+    padding-right: 5px;
+  }
 `;
 
 export const Container = styled.div`
@@ -23,3 +27,5 @@ export const Divider = styled.div`
   height: 32px;
   background: #e9e9e9;
 `;
+
+

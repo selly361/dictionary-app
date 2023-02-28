@@ -14,7 +14,6 @@ import {
   SourceLabel,
   StyledArticle,
   StyledPhonetic,
-  StyledPlayButton,
   SubHeading,
   SubHeadingContainer,
   ThesaurusContainer,
@@ -23,10 +22,10 @@ import {
   TopSection,
   Wrapper,
 } from "./styles";
-import { IArticleProps, IWord } from "types";
-import { NewWindowsIcon, PlayIcon } from "assets";
 import React, { Fragment } from "react";
 
+import { IArticleProps } from "types";
+import { NewWindowsIcon } from "assets";
 import { uniqueId } from "utils/unqiueId";
 
 function Article({ data, handleClick }: IArticleProps) {

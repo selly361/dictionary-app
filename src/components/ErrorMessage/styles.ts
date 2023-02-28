@@ -8,6 +8,10 @@ export const StyledErrorMessage = styled.div`
   text-align: center;
   margin: auto;
   width: 736px;
+
+  @media (max-width: 813px){
+    width: 95vw;
+  }
 `;
 
 export const Title = styled.h2`

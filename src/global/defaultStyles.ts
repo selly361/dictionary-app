@@ -57,7 +57,6 @@ const SearchFieldContainer = css`
   align-items: center;
   justify-content: space-between;
   Background: ${props => props.theme.inputBg};
-  margin: auto;
 
   &:focus {
     border: 1px solid #a445ed;
@@ -66,6 +65,7 @@ const SearchFieldContainer = css`
   &.error {
     border: 1px solid #ff5252;
   }
+
 `;
 
 const SearchField = css`
@@ -76,7 +76,9 @@ const SearchField = css`
   line-height: 24px;
   transition: 1s ease border;
   background: transparent;
-  width: 90%;
+  max-width: 90%;
+
+
 `;
 
 export {

@@ -37,7 +37,9 @@ export const GlobalStyles = createGlobalStyle`
     padding-bottom: 10px;
   }
 
-  
+  * {
+    transition: 1s ease color, 1s ease background-color, 1s ease border;
+  }
 
   
   input,

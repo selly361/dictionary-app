@@ -1,19 +1,35 @@
-import { HeadingL, HeadingM, HeadingS, Paragraph, ParagraphS } from "global/defaultStyles";
+import {
+  HeadingL,
+  HeadingM,
+  HeadingS,
+  Paragraph,
+  ParagraphS,
+} from "global/defaultStyles";
 
 import styled from "styled-components";
 
 export const StyledArticle = styled.article`
-  width: 737px;
+  width: 736.1px;
   display: grid;
   gap: 40px;
   margin: auto;
+  padding-left: 10px;
+
+
+  @media (max-width: 813px){
+    width: 95vw;
+  }
 `;
 
 export const TopSection = styled.section`
-  width: 737px;
+  width: 736.1px;
   height: 114px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 813px){
+    width: 95vw;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -30,18 +46,6 @@ export const StyledPhonetic = styled.h2`
   color: ${(props) => props.theme.purple};
 `;
 
-export const StyledPlayButton = styled.button`
-  background: transparent;
-
-  svg {
-    transition: 1s ease opacity;
-  }
-
-  &:hover svg {
-    opacity: 1;
-  }
-`;
-
 export const Divider = styled.div`
   height: 1px;
   width: 656px;
@@ -49,7 +53,7 @@ export const Divider = styled.div`
 `;
 
 export const BottomDivider = styled(Divider)`
-  width: 100%;
+  width: 736.1px; ;
 `;
 
 export const SubHeading = styled.h3`
@@ -66,7 +70,14 @@ export const SubHeadingContainer = styled.div`
   padding-bottom: 40px;
 `;
 
-export const MiddleSection = styled.section``;
+export const MiddleSection = styled.section`
+  width: 736.1px;
+
+
+  @media (max-width: 813px){
+    width: 95vw;
+  }
+`;
 
 export const SecondarySubHeading = styled.h4`
   ${HeadingS};
@@ -111,6 +122,7 @@ export const ExampleText = styled.p`
   ${Paragraph}
   color: ${(props) => props.theme.text.secondary};
   padding-left: 20px;
+  max-width: 100%;
 `;
 
 export const ThesaurusWord = styled.button`
@@ -134,19 +146,22 @@ export const ThesaurusContainer = styled.div`
   display: grid;
   gap: 4px;
   grid-template-columns: 1fr 1fr 1fr;
-`;
 
+
+  @media (max-width: 900px){
+    grid-template-columns: 1fr 1fr;
+  }
+`;
 
 export const SourceLabel = styled.h5`
   ${ParagraphS}
   color: ${(props) => props.theme.text.secondary};
-  
-`
+`;
 
 export const SourceContent = styled.a`
   ${ParagraphS}
   color: ${(props) => props.theme.text.primary};
-`
+`;
 
 export const BottomContainer = styled.div`
   display: flex;
@@ -154,7 +169,7 @@ export const BottomContainer = styled.div`
   align-items: center;
 
   & > div {
-      display: flex;
-  gap: 3px;
+    display: flex;
+    gap: 3px;
   }
-`
+`;

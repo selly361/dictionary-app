@@ -24,7 +24,7 @@ export const useFetchData = (word: string) => {
       );
 
       if (data.title == "No Definitions Found")
-        throw new Error("No Definitions Found");
+        throw new Error(data.title);
 
       setData(data[0]);
 
